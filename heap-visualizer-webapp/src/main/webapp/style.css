@@ -1,0 +1,102 @@
+root { 
+    display: block;
+}
+h2 {
+	text-align: center;
+	color: lawngreen;
+	text-transform: capitalize;
+	font-family: Verdana, sans-serif
+}
+body {
+	background-color: black;
+	color: lawngreen;
+
+}
+.mainContainer {
+	border: lightgreen solid thin;
+	visibility: visible;
+	margin-right: 1em;
+	width: 48%;
+
+}
+
+.dataContainer {
+	visibility: visible;
+	margin: 1em;
+
+}
+.subdataContainer {
+	border: orange dashed thin;
+	visibility: visible;
+	margin-bottom: 1em;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 1em
+
+}
+.rf-gauge_name {
+	font-family:sans-serif;
+	font-size: 13px;
+	color: lawngreen;
+	font-weight: bold;
+
+
+}
+.rf-gauge_plot {
+	border: green ridge thin;
+	float: left;
+	width: 65%;
+	
+}
+.rf-gauge_trend {
+	border: green ridge thin;
+	width: 30%;
+	float: right;
+}
+.rf-gauge_usage {
+	font-family: monospace;
+	font-size: 12px;
+	color: greenyellow;
+	clear: both;
+	
+}
+
+a {
+	color : lightgreen;
+	font-family: monospace;
+	font-size: 12px;
+}
+.details {
+	text-align: right;
+	margin-bottom: 2em;
+	margin-right: 1em
+
+}
+.credits {
+	color: gold;
+	font-size: 11px;
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+.datatable {
+	padding: 0em;
+	margin: 0em;
+}
+
+#logger {
+	color: gray;
+	font-size: 11px;
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+.metadatastyle {
+	clear: both;
+	background-color: black;
+	color: lawngreen;
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	
+	margin-bottom: 1em;
+}

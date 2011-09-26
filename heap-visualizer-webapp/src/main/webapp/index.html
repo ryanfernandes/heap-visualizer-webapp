@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JVM Memory Monitor</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="jquery.sparkline.min.js"></script>
+		<script type="text/javascript" src="heapvisualizer.js"></script>
+		<script>
+			//MAIN - method called when everything is loaded
+			$(document).ready(function () {
+				var viz = new HeapVizualizer();
+
+				//layout the components 
+				$("#heapdata").css("float", "left");
+				$("#nonheapdata").css("float", "right");
+				$("#heapdataComponents").hide();
+				$("#nonheapdataComponents").hide();
+				$("#metadata").hide();
+
+				//start receiving monitoring data
+				monitor(viz);
+				getMetaData();
+
+			});
+
+
+		</script>
+
+    </head>
+    <body>
+		<h2>Heap Visualizer</h2>
+		<div class="credits">Powered By: 
+			<a href="http://jackson.codehaus.org">Jackson JSON Processor</a>|
+			<a href="http://jquery.org">JQuery</a>|
+			<a href="http://omnipotent.net/jquery.sparkline">JQuery Sparklines</a>|
+			<a href="http://tripoverit.blogspot.com">Ryan Fernandes</a>|
+		</div>
+		<div id="metadata" class="metadatastyle">&nbsp;<a href="#" onclick="triggerGC()" style="color:gold">Trigger GC</a></div>
+        <div id="jvmdata">
+			<div id="loader" class="loading">Loading...</div>
+			<div id="heapdata" class="mainContainer"><div class="details"><a href="#" onclick="$('#heapdataComponents').toggle('slow')">details</a></div>
+				<div id="heapdataComponents"></div>
+			</div>
+			<div id="nonheapdata" class="mainContainer"><div class="details"><a href="#" onclick="$('#nonheapdataComponents').toggle('slow')">details</a></div>
+				<div id="nonheapdataComponents"></div>
+			</div>
+			<div id="logger"></div>
+		</div>
+    </body>
+</html>
