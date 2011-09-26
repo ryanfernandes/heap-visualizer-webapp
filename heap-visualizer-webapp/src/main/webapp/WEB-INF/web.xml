@@ -3,11 +3,27 @@
     <display-name>Heap Visualizer</display-name>
     <servlet>
         <servlet-name>Monitor</servlet-name>
-        <servlet-class>ryan.jvmmonitor.Monitor</servlet-class>
+        <servlet-class>ryan.jvmmonitor.servlet.Monitor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Metadata</servlet-name>
+        <servlet-class>ryan.jvmmonitor.servlet.Metadata</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actions</servlet-name>
+        <servlet-class>ryan.jvmmonitor.servlet.Actions</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Monitor</servlet-name>
         <url-pattern>/monitor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Metadata</servlet-name>
+        <url-pattern>/metadata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actions</servlet-name>
+        <url-pattern>/actions</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
